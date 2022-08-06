@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+
+
+    <link rel="stylesheet" href="styel.css" >
+</head>
+<body>
+
+    <div id="hellow" >
+        <div v-if="shopdrop">
+            <ul v-for=" book in books " >
+                <li>{{ book.title }}</li>
+                <h3> {{ book.author }} </h3>
+            </ul>
+        </div>
+       
+      <a v-bind:href="url" >link</a>
+
+        <button @click="togleshowbuks()" >
+            <span v-if="shopdrop" >open</span>
+            <span v-if="!shopdrop" >de open</span>
+            
+        </button>
+        <p v-show = "shopdrop" > shop buks frends </p>
+
+        <div class=" box " @mouseover="handleEvent($event,5)">mousover</div>
+        <div class=" box " @mouseleave="handleEvent" >mouselave</div>
+        <div class=" box " @dbclick="handleEvent" >debug click</div>
+        <div class=" box " @mousemove="handlimousover" >mausmove{{ x }} - {{ y }}</div>
+    </div>
+
+    <script src="vue.js" ></script>
+</body>
+</html>
